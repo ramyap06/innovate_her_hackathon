@@ -32,7 +32,10 @@
   <body>
     <div>
       <div class="menu_bar">
-        <button class="map">Map</button>
+        <a href="map">
+          <button class="map">Map</button>
+        </a>
+        
         <!-- <button class="directions">Directions</button> -->
         <button class = "about">About</button>
       </div> 
@@ -44,7 +47,7 @@
     <div class="heading"><h2>Travel Destinations (10 mile radius)</h2></div>
 
     <div class="container">
-      <div class="map">
+      <div id="map">
         <div style="display:flex;justify-content:space-around; align-items:center">
           <div>
             <button class="map" onclick="fetchLocation()">Get Location</button>
