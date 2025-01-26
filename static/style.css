@@ -131,7 +131,7 @@ button.map:hover {
 
 .scrolling_menu{
     width: 400px;
-    height: 200px;
+    height: 400px;
     margin-left: 100px;
     margin-top: 180px;
     overflow-y: auto;
