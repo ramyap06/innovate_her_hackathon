@@ -64,6 +64,11 @@ button.map:hover {
     color: #759687;
 }
 
+.container {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .map_placeholder {
     width: 600px;
     height: 600px;
