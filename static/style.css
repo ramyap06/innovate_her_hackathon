@@ -69,6 +69,18 @@ button.map:hover {
     justify-content: flex-start;
 }
 
+#latitude{
+    margin-left: 10px;
+    font-size: 30px;
+    color:rgb(135, 183, 135);
+}
+
+#longitude{
+    margin-left: 10px;
+    font-size: 30px;
+    color:rgb(135, 183, 135);
+}
+
 .map_placeholder {
     width: 600px;
     height: 600px;
@@ -84,10 +96,10 @@ button.map:hover {
 }
 
 .scrolling_menu{
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 200px;
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 170px;
     overflow-y: auto;
 }
 
