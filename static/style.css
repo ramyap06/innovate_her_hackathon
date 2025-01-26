@@ -13,7 +13,7 @@ h1{
 .img {
     width:100%;
     height: auto;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .heading{
@@ -85,6 +85,7 @@ button.map:hover {
 
 #longitude{
     margin-left: 10px;
+    margin-top: auto;
     font-size: 30px;
     color:rgb(135, 183, 135);
 }
@@ -107,7 +108,7 @@ button.map:hover {
     width: 400px;
     height: 200px;
     margin-left: 100px;
-    margin-top: 175px;
+    margin-top: 180px;
     overflow-y: auto;
 }
 
