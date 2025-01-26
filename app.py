@@ -1,3 +1,6 @@
+from flask import Flask, render_template, request, jsonify
+import ipinfo
+
 name = ['Amelia Earhart', 'Winifred Parker', 'Frieda Parker', 'Virginia C Meredith', 'Mari Evans', 'Eva Mozes Kor', 'Madam CJ Walker', 'Frances Morgan Swain']
 lat = [40.42553, 40.427836, 40.428478, 40.426429, 39.773611, 39.450220, 39.776150, 39.167125]
 long = [-86.92514, -86.920856, -86.919540, -86.923241, -86.151306, -87.413290, -86.167213, -86.525428]
@@ -9,4 +12,34 @@ description = ['Amelia Mary Earhart, born July 24, 1897, was an American aviatio
                         'A Holocaust survivor, Eva Mozes Kor and her twin sister were subjected to horrific human experimentation at Auschwitz. Kor was an activist, author and founder of CANDLES (Children of Auschwitz Nazi Deadly Lab Experiments Survivors), an organization devoted to educating the public about eugenics, the Holocaust, and the power of forgiveness. Kor was a long-time resident of Terre Haute.',
                         'Madam CJ Walker was a Black entrepreneur, philanthropist and activist. Madam Walker was the first self-made woman millionaire, as documented by Guinness World Records. She founded Madam CJ Walker Manufacturing Company which developed hair care products. The manufacturing headquarters was repurposed and is now named The Madam Walker Legacy Center, it stands as a testament to Madam Walker\'s entrepreneurial spirit.',
                         'Nearly two decades before women won the right to vote, Frances Morgan Swain, wife of Joseph Swain IU\'s ninth president, was lobbying IU\'s trustees for a space devoted to female students on campus. Now, more than 100 years later, the space she helped build will bear her name.']
-                        
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')  # Your HTML file
+
+#@app.route('/get-sites', methods=['POST'])
+@app.route('/get-location')
+def get_location():
+    access_token = "a0a64e2001c43d"
+    handler = ipinfo.getHandler(access_token)
+    details = handler.getDetails()
+    location = details.loc
+
+    latitude = float(location.split(",")[0])
+    longitude = float(location.split(",")[1])
+
+    return jsonify({"latitude": latitude, "longitude": longitude})
+'''
+    sites = []
+    for i in range(8):
+        distance = ((lat[i] - latitude) ** 2) + ((long[i] - longitude) ** 2)
+        if distance <= 10:
+            sites.append([name[i], description[i], lat[i], long[i]])
+'''
+    
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
