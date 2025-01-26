@@ -27,6 +27,13 @@ h1{
     color:#e0e0e0;
 }
 
+#map_heading{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 150px;
+    color:#e0e0e0;
+}
+
 .heading{
     text-align: center;
     font-size: 40px;
