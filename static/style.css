@@ -69,6 +69,16 @@ button.map:hover {
     justify-content: flex-start;
 }
 
+.latitude{
+    font-size: 30px;
+    color:palegreen
+}
+
+.longitude{
+    font-size: 30px;
+    color:palegreen
+}
+
 .map_placeholder {
     width: 600px;
     height: 600px;
