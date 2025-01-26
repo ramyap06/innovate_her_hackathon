@@ -79,7 +79,17 @@ button.map:hover {
 }
 
 .scrolling_menu{
-    
+    width: 600px;
+    height: 600px;
+    background-color: #e0e0e0;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-left: 150px;
 }
 
 /* button.loc-btn {
