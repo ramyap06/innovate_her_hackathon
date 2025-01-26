@@ -18,6 +18,8 @@ h1{
 .heading{
     text-align: center;
     font-size: 40px;
+    margin-top: auto;
+    color:#e0e0e0;
 }
 
 .menu_bar {
