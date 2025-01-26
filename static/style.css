@@ -142,12 +142,11 @@ button.map:hover {
 }
 
 .blurb{
-    text-align: center;
+    text-align: left;
     color: white;
     font-size: 20px;
     margin-left: 250px;
     margin-right: 700px;
-    white-space: nowrap;
 }
 
 /* button.loc-btn {
