@@ -37,14 +37,19 @@
         </a>
         
         <!-- <button class="directions">Directions</button> -->
-        <button class = "about">About</button>
+        <a href="#about_location">
+          <button class = "about">About</button>
+        </a>
+        
       </div> 
       <hr>
     <img class="img" src="{{ url_for('static', filename='logo.png') }}"></img>
     <h3 class="slogan">Explore Her Story, One Destination at a Time!</h3>
     </div>
 
-    <div class="heading"><h2>Travel Destinations (10 mile radius)</h2></div>
+    <div class="heading">
+      <h2>Travel Destinations (10 mile radius)</h2>
+    </div>
 
     <div class="container">
       <div class="map">
@@ -75,6 +80,12 @@
         <a id="destination7" href="#">Destination 7</a>
         <a id="destination8" href="#">Destination 8</a>
       </div>
+    </div>
+    <div class="about_section">
+      <div class="heading">
+        <h2>About Herstory Walks</h2>
+      </div>
+      <p class="about_location">Stuff goes here</p>
     </div>
   </body>
 
