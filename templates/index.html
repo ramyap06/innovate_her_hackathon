@@ -13,6 +13,7 @@
                     // Display the latitude and longitude on the page
                     document.getElementById('latitude').textContent = `Latitude: ${data.latitude}`;
                     document.getElementById('longitude').textContent = `Longitude: ${data.longitude}`;
+                    document.getElementById('maps').src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyCMq3bpKoGR6S3QDRyZqq7Y2szxfebmP4w&q=${data.latitude},${data.longitude}`;
                     document.getElementById('destination1').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.42553,-86.92514&travelmode=driving';
                     document.getElementById('destination2').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.427836,-86.920856&travelmode=driving';
                     document.getElementById('destination3').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.428478,-86.919540&travelmode=driving';
