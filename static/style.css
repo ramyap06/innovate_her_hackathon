@@ -37,6 +37,7 @@ button.map {
     height: 40px;
     border: none; 
     font-size: 20px;
+    margin-left: 20px;
 }
 
 /* button.directions {
@@ -79,14 +80,14 @@ button.map:hover {
 
 #latitude{
     margin-left: 10px;
-    font-size: 30px;
+    font-size: 20px;
     color:rgb(135, 183, 135);
 }
 
 #longitude{
     margin-left: 10px;
     margin-top: auto;
-    font-size: 30px;
+    font-size: 20px;
     color:rgb(135, 183, 135);
 }
 
