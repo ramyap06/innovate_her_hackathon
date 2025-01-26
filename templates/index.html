@@ -14,18 +14,39 @@
                     document.getElementById('latitude').textContent = `Latitude: ${data.latitude}`;
                     document.getElementById('longitude').textContent = `Longitude: ${data.longitude}`;
                     document.getElementById('maps').src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyCMq3bpKoGR6S3QDRyZqq7Y2szxfebmP4w&q=${data.latitude},${data.longitude}`;
-                    document.getElementById('destination1').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.42553,-86.92514&travelmode=driving';
-                    document.getElementById('destination2').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.427836,-86.920856&travelmode=driving';
-                    document.getElementById('destination3').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.428478,-86.919540&travelmode=driving';
-                    document.getElementById('destination4').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.426429,-86.923241&travelmode=driving';
-                    document.getElementById('destination5').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=39.773611,-86.151306&travelmode=driving';
-                    document.getElementById('destination6').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=39.450220,-87.413290&travelmode=driving';
-                    document.getElementById('destination7').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=39.776150,-86.167213&travelmode=driving';
-                    document.getElementById('destination8').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=39.167125,-86.525428&travelmode=driving';
-                })
+                    loadSites();
+                  })
                 .catch(error => console.error('Error fetching location:', error));
         }
-    function loadLocations() {}
+    function loadSites() {
+      fetch('/get-sites')
+        .then(response => response.json())
+        .then(data => {
+          const scrolling_menu = document.querySelector('.scrolling_menu');
+          scrolling_menu.innerHTML = ''; // Clear existing content
+
+          sites.forEach((site, index) => {
+              const a = document.createElement('a');
+              a.href = "#";
+              a.innerText = site;
+              if (index === 0) {
+                  a.classList.add('active');
+              } else {
+                  a.id = `destination${index}`;
+              }
+              scrolling_menu.appendChild(a);
+          });
+          document.getElementById('destination1').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.42553,-86.92514&travelmode=driving';
+          document.getElementById('destination2').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.427836,-86.920856&travelmode=driving';
+          document.getElementById('destination3').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.428478,-86.919540&travelmode=driving';
+          document.getElementById('destination4').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=40.426429,-86.923241&travelmode=driving';
+          document.getElementById('destination5').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=39.773611,-86.151306&travelmode=driving';
+          document.getElementById('destination6').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=39.450220,-87.413290&travelmode=driving';
+          document.getElementById('destination7').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=39.776150,-86.167213&travelmode=driving';
+          document.getElementById('destination8').href = 'https://www.google.com/maps/dir/?api=1&origin=' + data.latitude + "," + data.longitude + '&destination=39.167125,-86.525428&travelmode=driving';
+        })
+        .catch(error => console.error('Error fetching location:', error));
+    }
   </script>
   </head>
 

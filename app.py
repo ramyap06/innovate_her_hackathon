@@ -54,7 +54,15 @@ def get_location():
     
 @app.route('/set-sites')
 def set_sites():
-    return jsonify({"sites": distanceCalculator.sites})
+    access_token = "a0a64e2001c43d"
+    handler = ipinfo.getHandler(access_token)
+    details = handler.getDetails()
+    location = details.loc
+
+    latitude = float(location.split(",")[0])
+    longitude = float(location.split(",")[1])
+
+    return jsonify({"sites": distanceCalculator.sites, "latitude": latitude, "longitude": longitude})
 
 
 if __name__ == '__main__':
