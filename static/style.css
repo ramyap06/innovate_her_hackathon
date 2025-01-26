@@ -84,18 +84,26 @@ button.map:hover {
 }
 
 .scrolling_menu{
-    width:  400px;
+    width: 400px;
     height: 400px;
-    background-color: #e0e0e0;
-    border: 2px dashed #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #555;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-left: 10px;
+    overflow-y: auto;
+}
 
+.scrolling_menu a{
+    background-color: #759687;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.scrolling_menu a:hover {
+    background-color: cadetblue;
+}
+
+.scrolling_menu a.active {
+    background-color: darkslategrey;
+    color: white;
 }
 
 /* button.loc-btn {
