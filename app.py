@@ -31,6 +31,8 @@ def get_location():
     latitude = float(location.split(",")[0])
     longitude = float(location.split(",")[1])
 
+    return jsonify({"latitude": latitude, "longitude": longitude})
+'''
     link = ['https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.42553,-86.92514&travelmode=driving',
             'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.427836,-86.920856&travelmode=driving',
             'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.428478,-86.919540&travelmode=driving',
@@ -39,8 +41,8 @@ def get_location():
             'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=39.450220,-87.413290&travelmode=driving',
             'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=39.776150,-86.167213&travelmode=driving',
             'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=39.167125,-86.525428&travelmode=driving']
-
-    return jsonify({"latitude": latitude, "longitude": longitude})
+'''
+    
 '''
     sites = []
     for i in range(8):
@@ -49,7 +51,13 @@ def get_location():
             sites.append([name[i], description[i], lat[i], long[i]])
 '''
     
-
+@app.route('/set-sites')
+def set_sites():
+    sites = []
+    for i in range(8):
+        distance = ((lat[i] - latitude) ** 2) + ((long[i] - longitude) ** 2)
+        if distance <= 10:
+            sites.append([name[i], description[i], lat[i], long[i]])
 
 if __name__ == '__main__':
     app.run(debug=True)
