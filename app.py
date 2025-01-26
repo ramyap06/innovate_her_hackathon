@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import ipinfo
 import distanceCalculator
 
-name = ['Amelia Earhart', 'Winifred Parker', 'Frieda Parker', 'Virginia C Meredith', 'Mari Evans', 'Eva Mozes Kor', 'Madam CJ Walker', 'Frances Morgan Swain']
+name = ['Amelia Earhart Statue', 'Winifred Parker Hall', 'Frieda Parker Hall', 'Virginia C Meredith Hall', 'Mari Evans', 'Eva Mozes Kor', 'Madam CJ Walker', 'Frances Morgan Swain']
 lat = [40.42553, 40.427836, 40.428478, 40.426429, 39.773611, 39.450220, 39.776150, 39.167125]
 long = [-86.92514, -86.920856, -86.919540, -86.923241, -86.151306, -87.413290, -86.167213, -86.525428]
 description = ['Amelia Mary Earhart, born July 24, 1897, was an American aviation pioneer. On July 2, 1937, she disappeared over the Pacific Ocean while attempting to become the first female pilot to circumnavigate the world. During her life, Earhart embraced celebrity culture and women\'s rights, and since her disappearance has become a global cultural figure. She was the first female pilot to fly solo non-stop across the Atlantic Ocean and set many other records.', 
