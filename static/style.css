@@ -69,13 +69,13 @@ button.map:hover {
     justify-content: flex-start;
 }
 
-.latitude{
+#latitude{
     text-align: center;
     font-size: 30px;
     color:palegreen
 }
 
-.longitude{
+#longitude{
     text-align: center;
     font-size: 30px;
     color:palegreen
