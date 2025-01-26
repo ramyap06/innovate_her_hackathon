@@ -71,12 +71,12 @@ button.map:hover {
 
 #latitude{
     font-size: 30px;
-    color:palegreen
+    color:rgb(135, 183, 135);
 }
 
 #longitude{
     font-size: 30px;
-    color:palegreen
+    color:rgb(135, 183, 135);
 }
 
 .map_placeholder {
