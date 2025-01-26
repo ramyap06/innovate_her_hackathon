@@ -32,7 +32,19 @@ def get_location():
     latitude = float(location.split(",")[0])
     longitude = float(location.split(",")[1])
 
-    return jsonify({"latitude": latitude, "longitude": longitude})
+    sites = []
+
+    for i in range(8):
+        distance = ((lat[i] - latitude) ** 2) + ((long[i] - longitude) ** 2)
+        if (distance <= 0.3):
+            sites.append([name[i], description[i], lat[i], long[i]])
+    return jsonify({"latitude": latitude, "longitude": longitude
+                    , "name1": sites[0][0], "desc1": sites[0][1], "lat1": sites[0][2], "long1": sites[0][3]
+                    , "name2": sites[1][0], "desc2": sites[1][1], "lat2": sites[1][2], "long2": sites[1][3]
+                    , "name3": sites[2][0], "desc3": sites[2][1], "lat3": sites[2][2], "long3": sites[2][3]
+                    , "name4": sites[3][0], "desc4": sites[3][1], "lat4": sites[3][2], "long4": sites[3][3]
+                    })
+
 '''
     link = ['https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.42553,-86.92514&travelmode=driving',
             'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.427836,-86.920856&travelmode=driving',
