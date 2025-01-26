@@ -97,7 +97,7 @@ button.map:hover {
 
 .scrolling_menu{
     width: 400px;
-    height: 400px;
+    height: 200px;
     margin-left: 100px;
     margin-top: 170px;
     overflow-y: auto;
