@@ -22,7 +22,7 @@
   <body>
     <div>
       <div class="menu_bar">
-        <button class="map" onclick="fetchLocation()">Map</button>
+        <button class="map">Map</button>
         <!-- <button class="directions">Directions</button> -->
         <button class = "about">About</button>
       </div> 
@@ -32,8 +32,15 @@
 
     <div class="container">
       <div class="map">
-        <p id="latitude">Latitude: </p>
-        <p id="longitude">Longitude: </p>
+        <div style="display:flex;justify-content:space-around">
+          <div style="display:flex;flex-direction:column;">
+            <p id="latitude">Latitude: </p>
+            <p id="longitude">Longitude: </p>
+          </div>
+          <div>
+            <button class="map" onclick="fetchLocation()">Get Locations</button>
+          </div>
+        </div>
         <div class="map_placeholder">
           Map Coming</div>
       </div>
