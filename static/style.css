@@ -141,6 +141,11 @@ button.map:hover {
     color: white;
 }
 
+.blur{
+    text-align: center;
+    color: white;
+}
+
 /* button.loc-btn {
     background-color: #759687;
     color: white;
