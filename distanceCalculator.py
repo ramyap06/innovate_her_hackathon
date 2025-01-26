@@ -17,9 +17,9 @@ print(int_latitude + int_longitude)
 sites = []
 
 for i in range(8):
-    distance = ((lat[i] - int_latitude) ** 2) + ((long[i] - int_longitude) ** 2)
+    distance = ((LocationDatabase.lat[i] - int_latitude) ** 2) + ((LocationDatabase.long[i] - int_longitude) ** 2)
     if (distance <= 10):
-        sites.append([name[i], description[i], lat[i], long[i]])
+        sites.append([LocationDatabase.name[i], LocationDatabase.description[i], LocationDatabase.lat[i], LocationDatabase.long[i]])
 
 
 

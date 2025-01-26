@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import ipinfo
+import distanceCalculator
 
 name = ['Amelia Earhart', 'Winifred Parker', 'Frieda Parker', 'Virginia C Meredith', 'Mari Evans', 'Eva Mozes Kor', 'Madam CJ Walker', 'Frances Morgan Swain']
 lat = [40.42553, 40.427836, 40.428478, 40.426429, 39.773611, 39.450220, 39.776150, 39.167125]
@@ -53,11 +54,8 @@ def get_location():
     
 @app.route('/set-sites')
 def set_sites():
-    sites = []
-    for i in range(8):
-        distance = ((lat[i] - latitude) ** 2) + ((long[i] - longitude) ** 2)
-        if distance <= 10:
-            sites.append([name[i], description[i], lat[i], long[i]])
+    return jsonify({"sites": distanceCalculator.sites})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
