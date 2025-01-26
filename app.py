@@ -29,17 +29,16 @@ def get_location():
 
     latitude = float(location.split(",")[0])
     longitude = float(location.split(",")[1])
-    return jsonify({"latitude": latitude, "longitude": longitude})
 
+    return jsonify({"latitude": latitude, "longitude": longitude})
 '''
     sites = []
     for i in range(8):
         distance = ((lat[i] - latitude) ** 2) + ((long[i] - longitude) ** 2)
         if distance <= 10:
             sites.append([name[i], description[i], lat[i], long[i]])
-
-    return jsonify({"sites": sites})
 '''
+    
 
 
 if __name__ == '__main__':

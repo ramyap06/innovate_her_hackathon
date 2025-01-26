@@ -2,6 +2,7 @@ body {
     width: 100%;
     background-color:#212121;
     color: black;
+    
 }
 
 h1{
@@ -14,15 +15,73 @@ h1{
     height: auto;
 }
 
-button.loc-btn {
+.menu_bar {
+    display:flex;
+    width: 55%;
+    justify-content: space-around;
+    margin-left: 360px;
+}
+
+button.map {
+    background-color: #759687;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none; 
+    font-size: 20px;
+}
+
+/* button.directions {
+    background-color: #759687;
+    color: white;
+    width: 200px;
+    height: 25px;
+    border: none;
+} */
+
+button.about {
+    background-color: #759687;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 20px
+}
+
+hr {
+    width: 50%;
+    height: 3px;
+}
+
+button.about:hover {
+    background-color: white;
+    color: #759687;
+}
+button.map:hover {
+    background-color: white;
+    color: #759687;
+}
+
+.map_placeholder {
+    width: 600px;
+    height: 600px;
+    background-color: #e0e0e0;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-left: 150px;
+}
+
+/* button.loc-btn {
     background-color: #759687;
     color: white;
     width: 150px;
     height: 25px;
     border: none;
-}
-
-button.loc-btn:hover {
-    background-color: white;
-    color: #759687;
-}
+} */

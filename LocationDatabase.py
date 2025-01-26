@@ -1,6 +1,3 @@
-import pandas as pd
-import array
-
 name = ['Amelia Earhart', 'Winifred Parker', 'Frieda Parker', 'Virginia C Meredith', 'Mari Evans', 'Eva Mozes Kor', 'Madam CJ Walker', 'Frances Morgan Swain']
 lat = [40.42553, 40.427836, 40.428478, 40.426429, 39.773611, 39.450220, 39.776150, 39.167125]
 long = [-86.92514, -86.920856, -86.919540, -86.923241, -86.151306, -87.413290, -86.167213, -86.525428]

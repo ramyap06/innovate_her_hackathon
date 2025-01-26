@@ -21,19 +21,27 @@
 
   <body>
     <div>
+      <div class="menu_bar">
+        <button class="map" onclick="fetchLocation()">Map</button>
+        <!-- <button class="directions">Directions</button> -->
+        <button class = "about">About</button>
+      </div> 
+      <hr>
     <img class="img" src="{{ url_for('static', filename='logo.png') }}"></img>
-    <div style="width:100%; display:flex; justify-content:center;">
-      <button class="loc-btn" onclick="fetchLocation()">See Locations</button>
-      </div>
     </div>
+
     <div class="map">
       <p id="latitude">Latitude: </p>
       <p id="longitude">Longitude: </p>
-    </div>
-    <div class="description-box">
-      <h2>name</h2>
-      <h2>description</h2>
-      <button>google maps</button>
+      <div class="map_placeholder">
+        Map Coming</div>
     </div>
 
+    <div class="scrolling_menu">
+      <a href="#" class="active">Women Centric Historical Places</a>
+      <a href="#">Destination 1</a>
+      <a href="#">Destination 2</a>
+      <a href="#">Destination 3</a>
+      <a href="#">Destination 4</a> 
+    </div>
   </body>
