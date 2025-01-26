@@ -13,6 +13,7 @@ description = ['Amelia Mary Earhart, born July 24, 1897, was an American aviatio
                         'Madam CJ Walker was a Black entrepreneur, philanthropist and activist. Madam Walker was the first self-made woman millionaire, as documented by Guinness World Records. She founded Madam CJ Walker Manufacturing Company which developed hair care products. The manufacturing headquarters was repurposed and is now named The Madam Walker Legacy Center, it stands as a testament to Madam Walker\'s entrepreneurial spirit.',
                         'Nearly two decades before women won the right to vote, Frances Morgan Swain, wife of Joseph Swain IU\'s ninth president, was lobbying IU\'s trustees for a space devoted to female students on campus. Now, more than 100 years later, the space she helped build will bear her name.']
 
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -32,6 +33,17 @@ def get_location():
 
     return jsonify({"latitude": latitude, "longitude": longitude})
 '''
+    link = ['https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.42553,-86.92514&travelmode=driving',
+            'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.427836,-86.920856&travelmode=driving',
+            'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.428478,-86.919540&travelmode=driving',
+            'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=40.426429,-86.923241&travelmode=driving',
+            'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=39.773611,-86.151306&travelmode=driving',
+            'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=39.450220,-87.413290&travelmode=driving',
+            'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=39.776150,-86.167213&travelmode=driving',
+            'https://www.google.com/maps/dir/?api=1&origin=' + latitude + "," + longitude + '&destination=39.167125,-86.525428&travelmode=driving']
+'''
+    
+'''
     sites = []
     for i in range(8):
         distance = ((lat[i] - latitude) ** 2) + ((long[i] - longitude) ** 2)
@@ -39,7 +51,13 @@ def get_location():
             sites.append([name[i], description[i], lat[i], long[i]])
 '''
     
-
+@app.route('/set-sites')
+def set_sites():
+    sites = []
+    for i in range(8):
+        distance = ((lat[i] - latitude) ** 2) + ((long[i] - longitude) ** 2)
+        if distance <= 10:
+            sites.append([name[i], description[i], lat[i], long[i]])
 
 if __name__ == '__main__':
     app.run(debug=True)
