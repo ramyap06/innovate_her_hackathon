@@ -89,7 +89,7 @@ button.map:hover {
     color: #555;
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-left: 150px;
+    margin-left: -100px;
 }
 
 /* button.loc-btn {
