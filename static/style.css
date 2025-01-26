@@ -21,8 +21,9 @@ h1{
 }
 
 .img2 {
-    width:25%;
+    width:90%;
     height: auto;
+    margin-top: 50px;
 }
 
 .slogan{
@@ -156,10 +157,13 @@ button.map:hover {
 .blurb{
     text-align: left;
     color: white;
+    width: 90%;
     font-size: 20px;
+    /*
     margin-left: 150px;
     margin-right: 800px;
     margin-bottom: 100px;
+    */
 }
 
 /* button.loc-btn {
