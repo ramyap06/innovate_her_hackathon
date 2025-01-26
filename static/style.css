@@ -70,11 +70,13 @@ button.map:hover {
 }
 
 #latitude{
+    margin-left: 10px;
     font-size: 30px;
     color:rgb(135, 183, 135);
 }
 
 #longitude{
+    margin-left: 10px;
     font-size: 30px;
     color:rgb(135, 183, 135);
 }
