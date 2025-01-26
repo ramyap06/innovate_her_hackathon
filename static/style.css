@@ -147,6 +147,7 @@ button.map:hover {
     font-size: 20px;
     margin-left: 250px;
     margin-right: 700px;
+    white-space: nowrap;
 }
 
 /* button.loc-btn {
