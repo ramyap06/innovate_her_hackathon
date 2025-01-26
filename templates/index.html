@@ -57,9 +57,12 @@
           <button class="map">Map</button>
         </a>
         
-        <!-- <button class="directions">Directions</button> -->
-        <a href="#about_location">
+        <a href="#about_heading">
           <button class = "about">About</button>
+        </a>
+
+        <a>
+          <button class="faqs">FAQs</button>
         </a>
         
       </div> 
@@ -104,8 +107,10 @@
     </div>
     <div class="about_section">
       <div class="heading">
-        <h2>About Herstory Walks</h2>
+        <h2 id="about_heading">About Herstory Walks</h2>
       </div>
+      <div style="display:flex; justify-content: space-between; margin-right:100px; margin-left: 100px; margin-bottom: 100px;">
+      <div >
       <p class="blurb">Herstory Walks is a platform designed to connect women travelers with historical sites that celebrate the lives and legacies of extraordinary women throughout history. 
         Our mission is to make history more inclusive and inspiring by curating destinations that highlight women's contributions to culture, science, politics, and beyond. 
         Whether you're exploring iconic landmarks or uncovering hidden gems, Herstory Walks offers an engaging way to experience the past through the lens of women's achievements.
@@ -125,8 +130,12 @@
         <br>Join us in discovering the untold stories that deserve to be remembered and celebrated.</p>
       </p>
       <p id="about_location"></p>
-
+      </div>
+      <div >
       <img class="img2" src="{{ url_for('static', filename='woman-travel-clipart-xl.png') }}"></img>
+    </div>
+  </div>
+
     </div>
   </body>
 

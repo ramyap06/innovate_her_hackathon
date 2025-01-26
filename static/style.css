@@ -21,8 +21,9 @@ h1{
 }
 
 .img2 {
-    width:25%;
+    width:90%;
     height: auto;
+    margin-top: 50px;
 }
 
 .slogan{
@@ -63,13 +64,13 @@ button.map {
     margin-left: 80px;
 }
 
-/* button.directions {
+button.faqs {
     background-color: #759687;
     color: white;
     width: 200px;
     height: 25px;
     border: none;
-} */
+}
 
 button.about {
     background-color: #759687;
@@ -156,10 +157,13 @@ button.map:hover {
 .blurb{
     text-align: left;
     color: white;
+    width: 90%;
     font-size: 20px;
+    /*
     margin-left: 150px;
     margin-right: 800px;
     margin-bottom: 100px;
+    */
 }
 
 /* button.loc-btn {
