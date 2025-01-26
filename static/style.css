@@ -13,6 +13,7 @@ h1{
 .img {
     width:100%;
     height: auto;
+    margin-top: 100px;
 }
 
 .heading{
@@ -106,7 +107,7 @@ button.map:hover {
     width: 400px;
     height: 200px;
     margin-left: 100px;
-    margin-top: 170px;
+    margin-top: 175px;
     overflow-y: auto;
 }
 
